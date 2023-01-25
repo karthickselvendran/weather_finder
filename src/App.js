@@ -22,7 +22,8 @@ function App() {
 
   useEffect(() => {
     console.log("tes");
-    axios.get(`${githubAPILink}${API_key}`);
+    axios.get(`${githubAPILink}${API_key?.trim()}`);
+    // axios.get(`${githubAPILink}${API_key}`);
   }, []);
 
   const findWeather = async (e) => {
