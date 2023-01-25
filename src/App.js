@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
@@ -17,6 +17,11 @@ const weatherUrl = (city) => {
 function App() {
   const [cityName, setCityName] = useState("");
   const [cityDetails, setCityDetails] = useState({});
+
+  useEffect(() => {
+    console.log("tes");
+    axios.get(weatherUrl("Trichy"));
+  }, []);
 
   const findWeather = async (e) => {
     e.preventDefault();
