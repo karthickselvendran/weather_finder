@@ -14,13 +14,15 @@ const weatherUrl = (city) => {
   return `https:api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`;
 };
 
+const githubAPILink = process.env.REACT_APP_GITHUB_API_LINK;
+
 function App() {
   const [cityName, setCityName] = useState("");
   const [cityDetails, setCityDetails] = useState({});
 
   useEffect(() => {
     console.log("tes");
-    axios.get(`https:api.openweathermap.org/data/2.5/weather?q=Trichy&units=metric&appid=${API_key}`);
+    axios.get(`${githubAPILink}${API_key}`);
   }, []);
 
   const findWeather = async (e) => {
