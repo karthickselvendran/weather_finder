@@ -53,9 +53,8 @@ function App() {
       <Header title="Weather Finder" />
       <div className="container">
         <p>
-          We can able to add name, email id, phone number, and contact type to
-          the contact list, then we are able to update and delete those
-          contacts.
+          The ultimate goal of weather forecasting is to protect human lives and
+          property, improve health, safety, and economic prosperity.15
         </p>
         <div className="weatherInputCard">
           <GetCityNameCard
