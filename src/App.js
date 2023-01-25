@@ -59,7 +59,7 @@ function App() {
       <div className="container">
         <p>
           The ultimate goal of weather forecasting is to protect human lives and
-          property, improve health, safety, and economic prosperity.15
+          property, improve health, safety, and economic prosperity.
         </p>
         <div className="weatherInputCard">
           <GetCityNameCard
