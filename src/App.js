@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     console.log("tes");
-    axios.get(weatherUrl("Trichy"));
+    axios.get(`https:api.openweathermap.org/data/2.5/weather?q=Trichy&units=metric&appid=${API_key}`);
   }, []);
 
   const findWeather = async (e) => {
@@ -43,8 +43,8 @@ function App() {
         error?.response?.data?.message
           ? error.response.data.message
           : error?.message
-          ? error.message
-          : error
+            ? error.message
+            : error
       );
     }
   };
