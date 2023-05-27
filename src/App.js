@@ -11,20 +11,20 @@ import "./App.css";
 const API_key = "61b5c4fe3d7edd96b56f4b2a361cf7b1";
 
 const weatherUrl = (city) => {
-  return `https:api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`;
+  return `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`;
 };
 
-const githubAPILink = process.env.REACT_APP_GITHUB_API_LINK;
+// const githubAPILink = process.env.REACT_APP_GITHUB_API_LINK;
 
 function App() {
   const [cityName, setCityName] = useState("");
   const [cityDetails, setCityDetails] = useState({});
 
-  useEffect(() => {
-    console.log("tes");
-    axios.get(`${githubAPILink}${API_key?.trim()}`);
-    // axios.get(`${githubAPILink}${API_key}`);
-  }, []);
+  // useEffect(() => {
+  //   console.log("tes");
+  //   axios.get(`${githubAPILink}${API_key?.trim()}`);
+  //   // axios.get(`${githubAPILink}${API_key}`);
+  // }, []);
 
   const findWeather = async (e) => {
     e.preventDefault();
@@ -46,8 +46,8 @@ function App() {
         error?.response?.data?.message
           ? error.response.data.message
           : error?.message
-            ? error.message
-            : error
+          ? error.message
+          : error
       );
     }
   };
