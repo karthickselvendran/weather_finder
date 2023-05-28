@@ -24,7 +24,7 @@ const WeatherDetails = (props) => {
 
   return (
     <div className="weatherDetailsCard">
-      <img src={weatherPng} height={"100"} />
+      <img src={weatherPng} alt="weather" height={"100"} />
       <div className="detailsRow">
         <div>
           <span>
@@ -43,7 +43,7 @@ const WeatherDetails = (props) => {
         </div>
         <div>
           <span>
-            <b>Feels like:</b>{" "}
+            <b>Feels like:</b>
             {feels_like ? <span>{feels_like}&#xb0;C</span> : "-"}
           </span>
         </div>

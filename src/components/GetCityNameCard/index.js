@@ -5,8 +5,8 @@ import "./getCityNameCard.css";
 
 const GetCityNameCard = ({
   cityName = "",
-  setCityName = {},
-  findWeather = {},
+  setCityName = () => {},
+  findWeather = () => {},
 }) => {
   return (
     <form>

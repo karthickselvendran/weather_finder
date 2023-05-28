@@ -23,7 +23,7 @@ p {
   margin-bottom: 10px;
 }
 
-.weatherInputCard{
+.weatherInputCard {
   width: 40%;
 }
 
@@ -36,7 +36,6 @@ p {
 .searchContainer {
   margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
 }
 
 .searchInput {
@@ -48,14 +47,13 @@ p {
 }
 
 @media screen and (min-width:1000px) {
-  .weatherInputCard{
+  .weatherInputCard {
     width: 30%;
   }
 }
 
 @media screen and (max-width:700px) {
-  .weatherInputCard{
+  .weatherInputCard {
     width: 80%;
   }
 }
-

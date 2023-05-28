@@ -4,7 +4,7 @@ import "./input.css";
 const Input = (props) => {
   return (
     <div>
-      <input {...props} autoComplete="off" />
+      <input autoComplete="off" {...props} />
     </div>
   );
 };

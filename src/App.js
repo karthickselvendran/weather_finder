@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { ToastContainer } from "react-toastify";
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
 import GetCityNameCard from "./components/GetCityNameCard";
 import WeatherDetails from "./components/WeatherDetails";
 import Header from "./components/Header";
@@ -14,17 +13,9 @@ const weatherUrl = (city) => {
   return `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`;
 };
 
-// const githubAPILink = process.env.REACT_APP_GITHUB_API_LINK;
-
 function App() {
   const [cityName, setCityName] = useState("");
   const [cityDetails, setCityDetails] = useState({});
-
-  // useEffect(() => {
-  //   console.log("tes");
-  //   axios.get(`${githubAPILink}${API_key?.trim()}`);
-  //   // axios.get(`${githubAPILink}${API_key}`);
-  // }, []);
 
   const findWeather = async (e) => {
     e.preventDefault();
@@ -41,14 +32,10 @@ function App() {
       }
       setCityName("");
     } catch (error) {
-      console.log(error);
-      toast.error(
-        error?.response?.data?.message
-          ? error.response.data.message
-          : error?.message
-          ? error.message
-          : error
-      );
+      console.error(error);
+      const errorMsg =
+        error?.response?.data?.message || error?.message || error;
+      toast.error(errorMsg);
     }
   };
 
